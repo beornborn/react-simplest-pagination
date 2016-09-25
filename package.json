@@ -1,0 +1,35 @@
+{
+  "name": "react-simplest-pagination",
+  "version": "1.0.0",
+  "description": "simple pagination on react",
+  "main": "./dist/",
+  "scripts": {
+    "compile": "babel --presets es2015,stage-0,react --plugins transform-decorators-legacy -d dist/ src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beornborn/react-simplest-pagination.git"
+  },
+  "keywords": [
+    "pagination",
+    "simple",
+    "react"
+  ],
+  "author": "Oleg Gorbunov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/beornborn/react-simplest-pagination/issues"
+  },
+  "homepage": "https://github.com/beornborn/react-simplest-pagination#readme",
+  "dependencies": {
+    "radium": "^0.18.1",
+    "react": "^15.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.14.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-0": "^6.5.0"
+  }
+}
