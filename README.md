@@ -33,8 +33,8 @@ import Pagination from 'react-simplest-pagination'
 | currentPage    | int      |         | current page number                                                  |
 | totalPages     | int      |         | total pages amount                                                   |
 | onPageClick    | function |         | callback on page click: onClick={(num) => onPageClick(num)}          |
-
-There is no styling properties at the moment. If you need ask for this or make pull-request
+| containerStyle | object   |         | react style object like: {fontSize: 11}                              |
+| buttonStyle    | object   |         | react style object like: {fontSize: 11}                              |
 
 ## The best documentation
 

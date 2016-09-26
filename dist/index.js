@@ -56,6 +56,8 @@ var Pagination = (0, _radium2.default)(_class = function (_React$Component) {
       var _props = this.props;
       var currentPage = _props.currentPage;
       var totalPages = _props.totalPages;
+      var containerStyle = _props.containerStyle;
+      var buttonStyle = _props.buttonStyle;
 
 
       var styles = {
@@ -77,12 +79,12 @@ var Pagination = (0, _radium2.default)(_class = function (_React$Component) {
 
       var buttons = [];
       for (var i = 1; i <= totalPages; i++) {
-        buttons.push(this.pageButton(i, [styles.button, i === currentPage ? styles.active : {}]));
+        buttons.push(this.pageButton(i, [styles.button, i === currentPage ? styles.active : {}, buttonStyle]));
       }
 
       return _react2.default.createElement(
         'div',
-        { style: styles.container },
+        { style: [styles.container, containerStyle] },
         buttons
       );
     }
@@ -94,7 +96,9 @@ var Pagination = (0, _radium2.default)(_class = function (_React$Component) {
 Pagination.PropTypes = {
   currentPage: _react2.default.PropTypes.number.isRequired,
   totalPages: _react2.default.PropTypes.number.isRequired,
-  onPageClick: _react2.default.PropTypes.func
+  onPageClick: _react2.default.PropTypes.func,
+  containerStyle: _react2.default.PropTypes.object,
+  buttonStyle: _react2.default.PropTypes.object
 };
 
 exports.default = Pagination;

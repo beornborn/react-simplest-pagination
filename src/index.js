@@ -13,7 +13,7 @@ class Pagination extends React.Component {
   }
 
   render() {
-    const { currentPage, totalPages } = this.props
+    const { currentPage, totalPages, containerStyle, buttonStyle } = this.props
 
     const styles = {
       container: {
@@ -34,10 +34,10 @@ class Pagination extends React.Component {
 
     var buttons = [];
     for (let i=1; i <= totalPages; i++) {
-      buttons.push(this.pageButton(i, [styles.button, i === currentPage ? styles.active : {}]))
+      buttons.push(this.pageButton(i, [styles.button, i === currentPage ? styles.active : {}, buttonStyle]))
     }
 
-    return <div style={styles.container}>
+    return <div style={[styles.container, containerStyle]}>
       {buttons}
     </div>
   }
@@ -46,7 +46,9 @@ class Pagination extends React.Component {
 Pagination.PropTypes = {
   currentPage: React.PropTypes.number.isRequired,
   totalPages: React.PropTypes.number.isRequired,
-  onPageClick: React.PropTypes.func
+  onPageClick: React.PropTypes.func,
+  containerStyle: React.PropTypes.object,
+  buttonStyle: React.PropTypes.object
 }
 
 export default Pagination
